@@ -1,0 +1,47 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - invalidlenni
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of discord are you running?
+      options:
+        - Canary 105964 (c08c5de) 
+        - Stable 105691 (039634f)
+        - Ptb 105691 (039634f)
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Not a fake report?
+      description: By submitting this issue, you agree that you are not submitting fake reports!
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
